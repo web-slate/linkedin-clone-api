@@ -15,5 +15,14 @@ One way is to execute the `main` method in the `com.linkedin.ProfessionalNetwork
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
-```shell
-mvn spring-boot:run
+
+# linkedin-clone-api
+Linkedin clone api in Spring Boot
+
+Clone this project from GIT
+
+# Execution:
+Step 1: Open Terminal - mvn clean install
+
+Step 2: Open Terminal - mvn spring-boot:run
+
