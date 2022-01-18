@@ -8,10 +8,11 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.linkedin</groupId>
-    <artifactId>ProfessionalNetworking</artifactId>
+    <groupId>com.clone</groupId>
+    <artifactId>Linkedin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>LinkedIn Application</name>
+    <name>LinkedinClone</name>
+
     <description>LinkedinClone</description>
     <properties>
         <java.version>1.8</java.version>
@@ -43,6 +44,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
