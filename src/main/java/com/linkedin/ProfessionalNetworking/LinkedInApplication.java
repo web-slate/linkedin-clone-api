@@ -1,13 +1,13 @@
-package com.clone.linkedin;
+package com.linkedin.ProfessionalNetworking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LinkedinCloneApplication {
+public class LinkedInApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LinkedinCloneApplication.class, args);
+        SpringApplication.run(LinkedInApplication.class, args);
     }
 
 }

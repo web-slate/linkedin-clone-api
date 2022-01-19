@@ -1,10 +1,10 @@
-package com.clone.linkedin;
+package com.linkedin.ProfessionalNetworking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LinkedinCloneApplicationTests {
+class LinkedinInApplicationTests {
 
     @Test
     void contextLoads() {
