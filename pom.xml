@@ -8,10 +8,10 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.clone</groupId>
-    <artifactId>Linkedin</artifactId>
+    <groupId>com.linkedin</groupId>
+    <artifactId>ProfessionalNetworking</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>LinkedinClone</name>
+    <name>LinkedIn Application</name>
     <description>LinkedinClone</description>
     <properties>
         <java.version>1.8</java.version>
