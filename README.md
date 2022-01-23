@@ -1,3 +1,4 @@
+
 # Linkedin Clone Application
 Linkedin Clone Application
 
@@ -10,11 +11,13 @@ For building and running the application you need:
 
 ## Running the application locally
 
-There are several ways to run a Spring Boot application on your local machine. 
+There are several ways to run a Spring Boot application on your local machine.
 One way is to execute the `main` method in the `com.linkedin.ProfessionalNetworking.LinkedInApplication` class from your IDE.
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
+```shell
+mvn spring-boot:run
 
 # linkedin-clone-api
 Linkedin clone api in Spring Boot
@@ -26,3 +29,5 @@ Step 1: Open Terminal - mvn clean install
 
 Step 2: Open Terminal - mvn spring-boot:run
 
+Step 3: Accessing the application with below url. The default userid and password : admin
+http://localhost:8081/api/login?userId=admin&password=admin
