@@ -1,6 +1,5 @@
 package com.linkedin.ProfessionalNetworking.api;
 
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import com.linkedin.ProfessionalNetworking.model.LoginUser;
@@ -68,5 +67,3 @@ public class login {
         return ResponseEntity.ok().body(apiResponse);
     }
 
-
-}
