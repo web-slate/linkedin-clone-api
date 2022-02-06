@@ -26,25 +26,25 @@ import java.util.List;
 
 
 
+
 @RestController
 public class login {
 
     private static final Logger log = LoggerFactory.getLogger(login.class);
 
+
     @Autowired
     LoginService loginService;
 
+
     /**
      * This Method is used to check the Login of the application
-     * <p>
-     * /**
-     * This Method is used to check the Login of the application
-     *
      * @param userId
      * @param password
      * @return
      * @throws JsonProcessingException
      */
+
     @PostMapping(value = "/login")
     public ResponseEntity<ApiResponse> login(@RequestParam String userId, @RequestParam String password) throws JsonProcessingException {
         log.info("Login into Linkedin Professional Networking [{}]", userId, password);
@@ -59,8 +59,6 @@ public class login {
             apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
             apiResponse.setMessage(Constants.INVALID_USERNAME_PASSWORD);
         }
-
-        return ResponseEntity.ok().body(apiResponse);
     }
 
 }
