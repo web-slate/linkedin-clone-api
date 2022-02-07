@@ -28,3 +28,6 @@ Clone this project from GIT
 Step 1: Open Terminal - mvn clean install
 
 Step 2: Open Terminal - mvn spring-boot:run
+
+Step 3: Accessing the application with below url. The default userid and password : admin
+http://localhost:8081/api/login?userId=admin&password=admin
