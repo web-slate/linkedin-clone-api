@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a2c60b49-8206-418f-b9aa-1615cd0eaf7a" name="Changes" comment="tech(base): add login api.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/api/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/api/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/config/BaseSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/config/BaseSecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/dto/FeedResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/dto/FeedResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +134,7 @@
       <workItem from="1643658710835" duration="598000" />
       <workItem from="1643820730228" duration="28041000" />
       <workItem from="1644625685481" duration="594000" />
-      <workItem from="1644658796504" duration="9187000" />
+      <workItem from="1644658796504" duration="9254000" />
     </task>
     <task id="LOCAL-00001" summary="tech(base): add spring boot Initial Setup code">
       <created>1642545776597</created>

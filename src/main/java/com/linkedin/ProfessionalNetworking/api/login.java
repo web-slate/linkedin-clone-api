@@ -17,14 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
-
-
 import java.util.List;
-
-
-
-
 
 
 @RestController
@@ -39,12 +32,12 @@ public class login {
 
     /**
      * This Method is used to check the Login of the application
+     *
      * @param userId
      * @param password
      * @return
      * @throws JsonProcessingException
      */
-
     @PostMapping(value = "/login")
     public ResponseEntity<ApiResponse> login(@RequestParam String userId, @RequestParam String password) throws JsonProcessingException {
         log.info("Login into Linkedin Professional Networking [{}]", userId, password);
