@@ -24,5 +24,7 @@ public class FeedResponse {
 
     public String feedId;
 
+    public String connectionType;
+
 
 }
