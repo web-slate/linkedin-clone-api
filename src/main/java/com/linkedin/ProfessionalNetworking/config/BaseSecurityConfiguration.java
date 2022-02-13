@@ -41,13 +41,7 @@ public class BaseSecurityConfiguration extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-
-public class BaseSecurityConfiguration  extends WebSecurityConfigurerAdapter {
-
-    //FIXME: Method has to change when real time security enabled.
-    @Override
-    protected void configure(HttpSecurity http) throws Exception{
-        http.authorizeRequests().antMatchers("/").permitAll();
-
     }
+
+
 }
