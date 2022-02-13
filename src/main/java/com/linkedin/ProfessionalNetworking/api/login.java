@@ -53,7 +53,7 @@ public class login {
     public ResponseEntity<ApiResponse> login(@RequestParam String userId, @RequestParam String password) throws JsonProcessingException {
         log.info("Login into Linkedin Professional Networking [{}]", userId, password);
         ApiResponse apiResponse = new ApiResponse();
-        //FIXME: Hardcoded values are to be replaced.
+
 
         List<LoginUser> lstLoginUsr = loginService.checkUserLogin(userId, password);
         if (!lstLoginUsr.isEmpty()) {
