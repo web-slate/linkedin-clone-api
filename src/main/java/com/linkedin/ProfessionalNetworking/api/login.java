@@ -53,7 +53,7 @@ public class login {
     public ResponseEntity<ApiResponse> login(@RequestParam String userId, @RequestParam String password) throws JsonProcessingException {
         log.info("Login into Linkedin Professional Networking [{}]", userId, password);
         ApiResponse apiResponse = new ApiResponse();
-        //FIXME: Hardcoded values are to be replaced.
+
 
         List<LoginUser> lstLoginUsr = loginService.checkUserLogin(userId, password);
         if (!lstLoginUsr.isEmpty()) {
@@ -63,14 +63,6 @@ public class login {
             apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
             apiResponse.setMessage(Constants.INVALID_USERNAME_PASSWORD);
         }
-
-       if(userId.equals("admin") && password.equals("admin")){
-           apiResponse.setStatus(HttpStatus.OK.toString());
-           apiResponse.setMessage("Success");
-       }else{
-           apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
-           apiResponse.setMessage(Constants.INVALID_USERNAME_PASSWORD);
-       }
 
         return ResponseEntity.ok().body(apiResponse);
     }
