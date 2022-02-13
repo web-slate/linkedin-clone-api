@@ -64,14 +64,6 @@ public class login {
             apiResponse.setMessage(Constants.INVALID_USERNAME_PASSWORD);
         }
 
-       if(userId.equals("admin") && password.equals("admin")){
-           apiResponse.setStatus(HttpStatus.OK.toString());
-           apiResponse.setMessage("Success");
-       }else{
-           apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
-           apiResponse.setMessage(Constants.INVALID_USERNAME_PASSWORD);
-       }
-
         return ResponseEntity.ok().body(apiResponse);
     }
 
