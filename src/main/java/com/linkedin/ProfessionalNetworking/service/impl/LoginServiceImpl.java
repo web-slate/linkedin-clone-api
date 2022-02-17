@@ -2,6 +2,7 @@ package com.linkedin.ProfessionalNetworking.service.impl;
 
 import com.linkedin.ProfessionalNetworking.model.LoginUser;
 import com.linkedin.ProfessionalNetworking.repository.LoginUserRepository;
+import com.linkedin.ProfessionalNetworking.repository.UserFeedRepository;
 import com.linkedin.ProfessionalNetworking.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

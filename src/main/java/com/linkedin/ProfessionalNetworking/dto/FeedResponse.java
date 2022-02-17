@@ -20,11 +20,13 @@ public class FeedResponse {
 
     public String totalComments;
 
-    public List<String> comment = new ArrayList<>();
+    public String comment ;
 
     public String feedId;
 
     public String connectionType;
+
+    public String userId;
 
 
 }
