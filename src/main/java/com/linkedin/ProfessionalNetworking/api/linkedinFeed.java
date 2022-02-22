@@ -14,10 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,13 +72,13 @@ public class linkedinFeed {
         return ResponseEntity.ok().body(apiResponse);
     }
 
-    @PostMapping(value = "/feed")
-    public ResponseEntity<ApiResponse> fetchFeed(@RequestBody FeedRequest feedRequest) throws JsonProcessingException {
+    @GetMapping(value = "/feed")
+    public ResponseEntity<ApiResponse> fetchFeed(@RequestParam String userId) throws JsonProcessingException {
         log.info("Fetch Fee from Linkedin Professional Networking  ");
         ApiResponse apiResponse = new ApiResponse();
         //FIXME: Hardcoded values are to be replaced.
 
-        if(feedRequest != null && StringUtils.isNotBlank(feedRequest.getUserId())){
+        if( StringUtils.isNotBlank(userId)){
             apiResponse.setResponse(testData());
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("Success");
