@@ -3,10 +3,7 @@ package com.linkedin.ProfessionalNetworking.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,33 +16,33 @@ import lombok.NoArgsConstructor;
 @Data
 public class Feed {
     @Id
-    @Column(name="feed_id")
-    private String feedId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long feedId;
 
     @Column(name="user_id")
     private String userId;
 
-    @Column(name="legalName")
+    @Column(name="legalname")
     public String legalName;
 
     @Column(name="occupation")
     public String occupation;
 
-    @Column(name="companyName")
+    @Column(name="companyname")
     public String companyName;
 
-    @Column(name="feedMsg")
+    @Column(name="feedmsg")
     public String feedMsg;
 
-    @Column(name="totalLike")
+    @Column(name="totallike")
     public String totalLikes;
 
-    @Column(name="totalComment")
+    @Column(name="totalcomment")
     public String totalComments;
 
     @Column(name="comment")
     public String comment ;
 
-    @Column(name="connectionType")
+    @Column(name="connectiontype")
     public String connectionType;
 }
