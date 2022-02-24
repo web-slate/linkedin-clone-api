@@ -3,7 +3,6 @@ package com.linkedin.ProfessionalNetworking.api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.linkedin.ProfessionalNetworking.dto.FeedRequest;
-import com.linkedin.ProfessionalNetworking.dto.FeedResponse;
 import com.linkedin.ProfessionalNetworking.model.Feed;
 import com.linkedin.ProfessionalNetworking.response.ApiResponse;
 import com.linkedin.ProfessionalNetworking.service.FeedService;
@@ -29,16 +28,16 @@ public class linkedinFeed {
 
     /**
      * This method Fetch the Feeds based on the Linkedin User
-     * @param feedRequest
+     * @param userId
      * @return
      * @throws JsonProcessingException
      */
-    @GetMapping(value = "/fetchfeed")
-    public ResponseEntity<ApiResponse> fetchFeedTmp(@RequestBody FeedRequest feedRequest) throws JsonProcessingException {
+    @GetMapping(value = "/feed")
+    public ResponseEntity<ApiResponse> fetchFeedTmp(@RequestParam String userId) throws JsonProcessingException {
         log.info("Fetch Feed from Linkedin Professional Networking  ");
         ApiResponse apiResponse = new ApiResponse();
-        if(feedRequest != null && StringUtils.isNotBlank(feedRequest.getUserId())){
-            List<Feed> lstFeed = feedService.fetchFeedByUserId(feedRequest.getUserId());
+        if( StringUtils.isNotBlank(userId)){
+            List<Feed> lstFeed = feedService.fetchFeedByUserId(userId);
             apiResponse.setResponse(lstFeed);
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("Success");
@@ -51,13 +50,13 @@ public class linkedinFeed {
 
 
     /**
-     * This method Fetch the Feeds based on the Linkedin User
+     * This method Create the Feeds based on the Linkedin User
      * @param feedRequest
      * @return
      * @throws JsonProcessingException
      */
-    @PostMapping(value = "/fetchfeed")
-    public ResponseEntity<ApiResponse> createFeed(@RequestBody FeedResponse feedRequest) throws JsonProcessingException {
+    @PostMapping(value = "/createFeed")
+    public ResponseEntity<ApiResponse> createFeed(@RequestBody FeedRequest feedRequest) throws JsonProcessingException {
         log.info("Create Feed from Linkedin Professional Networking  ");
         ApiResponse apiResponse = new ApiResponse();
         if(feedRequest != null && StringUtils.isNotBlank(feedRequest.getUserId())){
@@ -72,49 +71,8 @@ public class linkedinFeed {
         return ResponseEntity.ok().body(apiResponse);
     }
 
-    @GetMapping(value = "/feed")
-    public ResponseEntity<ApiResponse> fetchFeed(@RequestParam String userId) throws JsonProcessingException {
-        log.info("Fetch Fee from Linkedin Professional Networking  ");
-        ApiResponse apiResponse = new ApiResponse();
-        //FIXME: Hardcoded values are to be replaced.
 
-        if( StringUtils.isNotBlank(userId)){
-            apiResponse.setResponse(testData());
-            apiResponse.setStatus(HttpStatus.OK.toString());
-            apiResponse.setMessage("Success");
-        }else{
-            apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
-            apiResponse.setMessage(Constants.INVALID_USERNAME_PASSWORD);
-        }
-        return ResponseEntity.ok().body(apiResponse);
-    }
 
-    /**
-     * Test Data
-     * @return
-     */
-    //FIXME: Remove the Method once connected DB
-    public List<FeedResponse> testData(){
-        List<FeedResponse> lstFeedResponse = new ArrayList<>();
-        FeedResponse response = new FeedResponse();
-        response.setLegalName("JP");
-        response.setTotalComments("10");
-        response.setTotalLikes("20");
-        response.setFeedMsg("According to the report, the continued political instability caused the forecast for the investment segment in 2022 to be sluggish. Sluggish recovery is also expected for the retail and office sectors, leaving only the residential market for " +
-                "bright recovery thanks to the property-related incentives under Budget 2022.");
-        response.setCompanyName("ByteBrain Technologies");
-        response.setOccupation("Technical Architect");
-        lstFeedResponse.add(response);
-        response = new FeedResponse();
-        response.setLegalName("Udhay");
-        response.setTotalComments("10");
-        response.setTotalLikes("20");
-        response.setFeedMsg("According to the report, the continued political instability caused the forecast for the investment segment in 2022 to be sluggish. Sluggish recovery is also expected for the retail and office sectors, leaving only the residential market for " +
-                "bright recovery thanks to the property-related incentives under Budget 2022.");
-        response.setCompanyName("DXC Technologies");
-        response.setOccupation("Team Lead");
-        lstFeedResponse.add(response);
-        return lstFeedResponse;
-    }
+
 
 }
