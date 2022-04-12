@@ -22,12 +22,17 @@ mvn spring-boot:run
 # linkedin-clone-api
 Linkedin clone api in Spring Boot
 
+# Configure Database in Local Postgres
+Step 1: CreateTables scripts are available in src/main/resources/DB/DDL. Execute the Scripts in Postgres.
+
+Step 2: Insert your own Values in the Tables T_USER and T_USER_FEED
+
 Clone this project from GIT
 
 # Execution:
 Step 1: Open Terminal - mvn clean install
 
-Step 2: Open Terminal - mvn spring-boot:run
+Step 2: Open Terminal - mvn spring-boot:run -Dspring-boot.run.profiles=local
 
 Step 3: Accessing the application with below url. The default userid and password : admin
 http://localhost:8081/api/login?userId=admin&password=admin
