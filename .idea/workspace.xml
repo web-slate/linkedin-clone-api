@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2c60b49-8206-418f-b9aa-1615cd0eaf7a" name="Changes" comment="tech(base): add login api.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/api/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/api/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/config/BaseSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linkedin/ProfessionalNetworking/config/BaseSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DB/DDL/createTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DB/DDL/createTables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +40,9 @@
     </option>
   </component>
   <component name="ProjectId" id="23t8FVjt66QmS1g91rFLT3wn5ry" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -111,6 +109,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.LinkedinCloneApplication" />
+      <item itemvalue="Spring Boot.LinkedInApplication (1)" />
+      <item itemvalue="Spring Boot.LinkedInApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -394,7 +397,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tech(base): add spring boot Initial Setup code" />

@@ -25,3 +25,16 @@ CREATE TABLE public.t_user_profile (
     last_name varchar NULL,
     profile_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
 );
+
+CREATE TABLE public.t_experience (
+    user_id varchar NOT NULL,
+    title varchar NULL,
+    employment_type varchar NULL,
+    company_name varchar NULL,
+    location varchar NULL,
+    active varchar NULL,
+    start_date varchar NULL,
+    end_date varchar NULL,
+    description varchar NULL,
+    experience_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
+);
