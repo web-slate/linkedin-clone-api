@@ -9,6 +9,43 @@ For building and running the application you need:
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Maven 3](https://maven.apache.org)
 
+## Setting Up Database in MacOS.
+
+```
+// Install Postgre SQL DB
+brew install postgresql
+
+// Start, Stop and Restart PostgreSQL Service.
+brew services start postgresql
+brew services stop postgresql
+brew services restart postgresql
+
+// Connect DB.
+psql postgres
+```
+
+### Create New Role `guest` should return `CREATE ROLE`
+```
+CREATE ROLE guest WITH LOGIN PASSWORD 'demo'
+```
+
+### Add Right access to create DB should return `ALTER ROLE`.
+```
+ALTER ROLE guest CREATEDB;
+```
+
+### Login in to DB with below user.
+
+```
+psql postgres -U guest
+```
+
+## Install PGAdmin4
+PgAdmin is software to connect DB, create table and execute SQL easier.
+
+```
+brew install --cask pgadmin4
+```
 ## Running the application locally
 
 There are several ways to run a Spring Boot application on your local machine.
