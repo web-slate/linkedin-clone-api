@@ -16,6 +16,11 @@ public class ProfileServiceImpl implements ProfileService {
     ProfileRepository profileRepository;
 
     @Override
+    public Profile getProfileByUserId(String userId) {
+        return profileRepository.findByUserId(userId);
+    }
+
+    @Override
     public List<Profile> createProfileForUser(ProfileRequest profileRequest) {
         Profile profilePayload = new Profile();
         profilePayload.setUserId(profileRequest.getUserId());

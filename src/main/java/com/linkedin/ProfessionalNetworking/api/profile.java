@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,6 +23,27 @@ public class profile {
 
     @Autowired
     ProfileService profileService;
+
+    @GetMapping(value = "/profile/{userId}")
+    public ResponseEntity<ApiResponse> getProfileByUserId(@PathVariable String userId) throws JsonParseException {
+        ApiResponse apiResponse = new ApiResponse();
+        if (userId != null) {
+          Profile foundProfile = profileService.getProfileByUserId(userId);
+          if (foundProfile != null) {
+              apiResponse.setResponse(foundProfile);
+              apiResponse.setStatus(HttpStatus.OK.toString());
+              apiResponse.setMessage("Found Profile");
+          } else {
+              apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
+              apiResponse.setMessage("User Id is not exist");
+          }
+        } else {
+          apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
+          apiResponse.setMessage("User Id parameter is missing");
+        }
+
+        return ResponseEntity.ok().body(apiResponse);
+    }
 
     @PostMapping(value = "/profile")
     public ResponseEntity<ApiResponse> createProfile(@RequestBody ProfileRequest profileRequest) throws JsonParseException {
