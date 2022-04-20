@@ -12,4 +12,6 @@ public class ProfileRequest {
     public String additionalName;
 
     public String userId;
+
+    public Long profileId;
 }
