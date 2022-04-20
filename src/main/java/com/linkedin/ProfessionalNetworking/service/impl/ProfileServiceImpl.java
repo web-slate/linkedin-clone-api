@@ -21,6 +21,18 @@ public class ProfileServiceImpl implements ProfileService {
     }
 
     @Override
+    public Profile updateProfileByProfileId(ProfileRequest profileRequest) {
+        Profile profilePayload = new Profile();
+        profilePayload.setUserId(profileRequest.getUserId());
+        profilePayload.setFirstName(profileRequest.getFirstName());
+        profilePayload.setProfileId(profileRequest.getProfileId());
+        profilePayload.setLastName(profileRequest.getLastName());
+        profilePayload.setAdditionalName(profileRequest.getAdditionalName());
+        profileRepository.save(profilePayload);
+        return null;
+    }
+
+    @Override
     public List<Profile> createProfileForUser(ProfileRequest profileRequest) {
         Profile profilePayload = new Profile();
         profilePayload.setUserId(profileRequest.getUserId());
