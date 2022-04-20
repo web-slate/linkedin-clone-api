@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -53,6 +54,21 @@ public class profile {
             apiResponse.setResponse(newProfile);
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("New Profile Created");
+        } else {
+            apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
+            apiResponse.setMessage(Constants.EMPTY_USER_REQUEST);
+        }
+        return ResponseEntity.ok().body(apiResponse);
+    }
+
+    @PutMapping(value = "/profile")
+    public ResponseEntity<ApiResponse> updateProfile(@RequestBody ProfileRequest profileRequest) throws JsonParseException {
+        ApiResponse apiResponse = new ApiResponse();
+        if(profileRequest != null) {
+            Profile profileToBeUpdated = profileService.updateProfileByProfileId(profileRequest);
+            apiResponse.setResponse(profileToBeUpdated);
+            apiResponse.setStatus(HttpStatus.OK.toString());
+            apiResponse.setMessage("Profile Updated");
         } else {
             apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
             apiResponse.setMessage(Constants.EMPTY_USER_REQUEST);
