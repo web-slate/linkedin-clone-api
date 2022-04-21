@@ -16,6 +16,11 @@ public class ExperienceServiceImpl implements ExperienceService {
     ExperienceRepository experienceRepository;
 
     @Override
+    public List<Experience> getExperienceByUserId(String userId) {
+        return experienceRepository.findByUserId(userId);
+    }
+
+    @Override
     public List<Experience> createExperience(ExperienceRequest experienceRequest) {
         Experience experiencePayload = new Experience();
         experiencePayload.setUserId(experienceRequest.getUserId());

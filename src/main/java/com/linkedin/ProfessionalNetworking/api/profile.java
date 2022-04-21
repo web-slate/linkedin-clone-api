@@ -36,11 +36,11 @@ public class profile {
               apiResponse.setMessage("Found Profile");
           } else {
               apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
-              apiResponse.setMessage("User Id is not exist");
+              apiResponse.setMessage(Constants.USER_ID_NOT_EXIST);
           }
         } else {
           apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
-          apiResponse.setMessage("User Id parameter is missing");
+            apiResponse.setMessage(Constants.EMPTY_USER_REQUEST);
         }
 
         return ResponseEntity.ok().body(apiResponse);
