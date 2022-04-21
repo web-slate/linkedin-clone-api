@@ -38,3 +38,17 @@ CREATE TABLE public.t_experience (
     description varchar NULL,
     experience_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
 );
+
+CREATE TABLE public.t_education(
+    user_id varchar NOT NULL,
+    school varchar NOT NULL,
+    degree varchar NULL,
+    field_of_study varchar NULL,
+    start_month varchar NULL,
+    start_year varchar NULL,
+    end_month varchar NULL,
+    end_year varchar NULL,
+    end_date varchar NULL,
+    description varchar NULL,
+    education_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
+);
