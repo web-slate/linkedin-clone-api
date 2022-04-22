@@ -1,0 +1,163 @@
+{
+	"variables": [],
+	"info": {
+		"name": "LinkedInClone",
+		"_postman_id": "348d401d-096f-0e42-86ab-729f97c14032",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Profile",
+			"description": "",
+			"item": [
+				{
+					"name": "Add New Profile",
+					"request": {
+						"url": "http://localhost:8081/api/profile",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"admin\",\n  \"firstName\": \"Sri Raghavi\",\n  \"lastName\": \"Venkatraman\",\n  \"additionalName\": \"Chuchu\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Find Profile by User Id",
+					"request": {
+						"url": "http://localhost:8081/api/profile/admin",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"admin\",\n  \"firstName\": \"Sri Raghavi\",\n  \"lastName\": \"Venkatraman\",\n  \"additionalName\": \"Chuchu\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile by Profile Id",
+					"request": {
+						"url": "http://localhost:8081/api/profile",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profileId\": \"2\",\n  \"userId\": \"admin\",\n  \"firstName\": \"Sri Raghavi\",\n  \"lastName\": \"Venkatraman\",\n  \"additionalName\": \"Sri\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Experience",
+			"description": "",
+			"item": [
+				{
+					"name": "Add New Experience",
+					"request": {
+						"url": "http://localhost:8081/api/experience",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"admin\",\n  \"title\": \"CEO\",\n  \"employmentType\": \"Full Time\",\n  \"companyName\": \"Apple Inc\",\n  \"location\": \"Cupertino, California, United States\",\n  \"currentCompany\": true,\n  \"startDate\": \"01-04-1976\",\n  \"endDate\": \"\",\n  \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Find Experience by User Id",
+					"request": {
+						"url": "http://localhost:8081/api/experience/admin",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"admin\",\n  \"title\": \"CEO\",\n  \"employmentType\": \"Full Time\",\n  \"companyName\": \"Apple Inc\",\n  \"location\": \"Cupertino, California, United States\",\n  \"currentCompany\": true,\n  \"startDate\": \"01-04-1976\",\n  \"endDate\": \"\",\n  \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Experience by Experience Id",
+					"request": {
+						"url": "http://localhost:8081/api/experience",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"experienceId\": \"2\",\n  \"userId\": \"admin\",\n  \"title\": \"Apple CEO\",\n  \"employmentType\": \"Full Time\",\n  \"companyName\": \"Apple Inc\",\n  \"location\": \"Cupertino, California, United States\",\n  \"currentCompany\": true,\n  \"startDate\": \"01-04-1976\",\n  \"endDate\": \"\",\n  \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost:8081/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"admin\",\n  \"password\": \"admin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
