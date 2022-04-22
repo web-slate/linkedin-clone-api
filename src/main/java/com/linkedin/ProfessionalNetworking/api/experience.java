@@ -1,5 +1,6 @@
 package com.linkedin.ProfessionalNetworking.api;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.linkedin.ProfessionalNetworking.dto.ExperienceRequest;
 import com.linkedin.ProfessionalNetworking.model.Experience;
@@ -10,11 +11,7 @@ import io.micrometer.core.instrument.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,7 +26,7 @@ public class experience {
         ApiResponse apiResponse = new ApiResponse();
         if (userId != null) {
             List<Experience> foundExperience = experienceService.getExperienceByUserId(userId);
-            if (foundExperience != null) {
+            if (foundExperience != null && !foundExperience.isEmpty()) {
                 apiResponse.setResponse(foundExperience);
                 apiResponse.setStatus(HttpStatus.OK.toString());
                 apiResponse.setMessage("Found Experience");
@@ -54,6 +51,22 @@ public class experience {
             apiResponse.setResponse(newExperience);
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("new experience created");
+        } else {
+            apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
+            apiResponse.setMessage(Constants.EMPTY_USER_REQUEST);
+        }
+        return ResponseEntity.ok().body(apiResponse);
+    }
+
+    @PutMapping(value = "/experience")
+    public ResponseEntity<ApiResponse> updateExperienceById(@RequestBody ExperienceRequest experienceRequest) throws JsonParseException {
+        ApiResponse apiResponse = new ApiResponse();
+
+        if (experienceRequest != null) {
+            Experience updatedExperience = experienceService.updateExperienceByExperienceId(experienceRequest);
+            apiResponse.setResponse(updatedExperience);
+            apiResponse.setStatus(HttpStatus.OK.toString());
+            apiResponse.setMessage("updated experience");
         } else {
             apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
             apiResponse.setMessage(Constants.EMPTY_USER_REQUEST);
