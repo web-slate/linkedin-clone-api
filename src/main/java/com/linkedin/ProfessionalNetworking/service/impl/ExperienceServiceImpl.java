@@ -21,6 +21,23 @@ public class ExperienceServiceImpl implements ExperienceService {
     }
 
     @Override
+    public Experience updateExperienceByExperienceId(ExperienceRequest experienceRequest) {
+        Experience updatedExperience = new Experience();
+        updatedExperience.setExperienceId(experienceRequest.getExperienceId());
+        updatedExperience.setUserId(experienceRequest.getUserId());
+        updatedExperience.setTitle(experienceRequest.getTitle());
+        updatedExperience.setEmploymentType(experienceRequest.getEmploymentType());
+        updatedExperience.setCompanyName(experienceRequest.getCompanyName());
+        updatedExperience.setLocation(experienceRequest.getLocation());
+        updatedExperience.setCurrentCompany(experienceRequest.getCurrentCompany());
+        updatedExperience.setStartDate(experienceRequest.getStartDate());
+        updatedExperience.setEndDate(experienceRequest.getEndDate());
+        updatedExperience.setDescription(experienceRequest.getDescription());
+        experienceRepository.save(updatedExperience);
+        return updatedExperience;
+    }
+
+    @Override
     public List<Experience> createExperience(ExperienceRequest experienceRequest) {
         Experience experiencePayload = new Experience();
         experiencePayload.setUserId(experienceRequest.getUserId());
