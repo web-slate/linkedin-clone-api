@@ -13,4 +13,5 @@ public class ExperienceRequest {
     public String startDate;
     public String endDate;
     public String description;
+    public Long experienceId;
 }
