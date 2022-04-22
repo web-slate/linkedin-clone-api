@@ -8,5 +8,7 @@ import java.util.List;
 public interface ExperienceService {
 
     List<Experience> getExperienceByUserId(String userId);
+
+    Experience updateExperienceByExperienceId(ExperienceRequest experienceRequest);
     List<Experience> createExperience(ExperienceRequest experienceRequest);
 }
