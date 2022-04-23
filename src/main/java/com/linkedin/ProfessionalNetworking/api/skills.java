@@ -1,0 +1,63 @@
+package com.linkedin.ProfessionalNetworking.api;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.linkedin.ProfessionalNetworking.dto.SkillsRequest;
+import com.linkedin.ProfessionalNetworking.model.Skills;
+import com.linkedin.ProfessionalNetworking.response.ApiResponse;
+import com.linkedin.ProfessionalNetworking.service.SkillsService;
+import com.linkedin.ProfessionalNetworking.util.Constants;
+import io.micrometer.core.instrument.util.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class skills {
+
+    @Autowired
+    SkillsService skillsService;
+
+    @GetMapping(value = "/skills/{userId}")
+    public ResponseEntity<ApiResponse> getSkillsByUserId(@PathVariable String userId) {
+        ApiResponse apiResponse = new ApiResponse();
+        if (userId != null) {
+            List<Skills> foundSkills = skillsService.getSkillsByUserId(userId);
+            if (foundSkills != null) {
+                apiResponse.setResponse(foundSkills);
+                apiResponse.setStatus(HttpStatus.OK.toString());
+                apiResponse.setMessage("Found SKills");
+            } else {
+                apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
+                apiResponse.setMessage(Constants.USER_ID_NOT_EXIST);
+            }
+        } else {
+            apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
+            apiResponse.setMessage(Constants.EMPTY_USER_REQUEST);
+        }
+
+        return ResponseEntity.ok().body(apiResponse);
+    }
+
+    @PostMapping(value = "/skills")
+    public ResponseEntity<ApiResponse> createSkills(@RequestBody SkillsRequest skillsRequest) throws JsonProcessingException {
+        ApiResponse apiResponse = new ApiResponse();
+
+        if (skillsRequest != null && StringUtils.isNotBlank(skillsRequest.getUserId())) {
+            List<Skills> newSkill = skillsService.createSkills(skillsRequest);
+            apiResponse.setResponse(newSkill);
+            apiResponse.setStatus(HttpStatus.OK.toString());
+            apiResponse.setMessage("new skills created");
+        } else {
+            apiResponse.setStatus(HttpStatus.BAD_REQUEST.toString());
+            apiResponse.setMessage(Constants.EMPTY_USER_REQUEST);
+        }
+        return ResponseEntity.ok().body(apiResponse);
+    }
+}

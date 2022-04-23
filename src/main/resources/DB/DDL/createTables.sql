@@ -52,3 +52,9 @@ CREATE TABLE public.t_education(
     description varchar NULL,
     education_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
 );
+
+CREATE TABLE public.t_skills(
+    user_id varchar NOT NULL,
+    skill varchar NOT NULL,
+    skill_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
+);
