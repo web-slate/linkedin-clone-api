@@ -46,6 +46,32 @@ PgAdmin is software to connect DB, create table and execute SQL easier.
 ```
 brew install --cask pgadmin4
 ```
+
+## Setting up Database without modifying `application.properties`
+
+- Create database name with `dd2jgod4ge5out` in postgres
+- Create user for the created database 
+```
+➜  linkedin-clone-api-new git:(main) createuser --interactive --pwprompt
+    Enter name of role to add: umvyqkpzkezvja
+    Enter password for new role: 6fd285461e7f93c0875caa672b5a295c2e9903f026bd0616fd4ba4219102198312
+    Enter it again: 6fd285461e7f93c0875caa672b5a295c2e9903f026bd0616fd4ba4219102198312
+    Shall the new role be a superuser? (y/n) y
+```
+- Connect to the database in terminal/DBevear/any tool to import the .SQL `src/main/resources/DB/DDL` 
+
+## Setting up Database host without modifying `application.properties`
+### MacOS
+- Open `/etc/hosts` in edit mode. 
+- Add below lines
+```
+127.0.0.1 ec2-44-192-245-97.compute-1.amazonaws.com
+localhost ec2-44-192-245-97.compute-1.amazonaws.com
+```
+- Save the file
+- Run
+```sudo killall -HUP mDNSResponder```
+
 ## Running the application locally
 
 There are several ways to run a Spring Boot application on your local machine.
