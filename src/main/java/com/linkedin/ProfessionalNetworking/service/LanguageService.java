@@ -1,11 +1,13 @@
 package com.linkedin.ProfessionalNetworking.service;
 
-import com.linkedin.ProfessionalNetworking.dto.EducationRequest;
-import com.linkedin.ProfessionalNetworking.model.Education;
+import com.linkedin.ProfessionalNetworking.dto.LanguageRequest;
+import com.linkedin.ProfessionalNetworking.model.Experience;
+import com.linkedin.ProfessionalNetworking.model.Language;
 
 import java.util.List;
 
-public interface EducationService {
-    List<Education> getEducationByUserId(String userId);
-    List<Education> createEducation(EducationRequest educationRequest);
+public interface LanguageService {
+    List<Language> getLanguageByUserId(String userId);
+    List<Language> createLanguage(LanguageRequest languageRequest);
+    Language updateLanguageByLanguageId(LanguageRequest languageRequest);
 }

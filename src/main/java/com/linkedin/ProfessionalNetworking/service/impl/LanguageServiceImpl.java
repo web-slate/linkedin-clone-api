@@ -1,37 +1,42 @@
 package com.linkedin.ProfessionalNetworking.service.impl;
 
-import com.linkedin.ProfessionalNetworking.dto.EducationRequest;
-import com.linkedin.ProfessionalNetworking.model.Education;
-import com.linkedin.ProfessionalNetworking.repository.EducationRepository;
-import com.linkedin.ProfessionalNetworking.service.EducationService;
+import com.linkedin.ProfessionalNetworking.dto.LanguageRequest;
+import com.linkedin.ProfessionalNetworking.model.Language;
+import com.linkedin.ProfessionalNetworking.repository.LanguageRepository;
+import com.linkedin.ProfessionalNetworking.service.LanguageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class EducationServiceImpl implements EducationService {
+public class LanguageServiceImpl implements LanguageService {
 
     @Autowired
-    EducationRepository educationRepository;
+    LanguageRepository languageRepository;
 
     @Override
-    public List<Education> getEducationByUserId(String userId) {
-        return educationRepository.findByUserId(userId);
+    public List<Language> getLanguageByUserId(String userId) {
+        return languageRepository.findByUserId(userId);
     }
 
     @Override
-    public List<Education> createEducation(EducationRequest educationRequest) {
-        Education educationPayload = new Education();
-        educationPayload.setUserId(educationRequest.getUserId());
-        educationPayload.setSchool(educationRequest.getSchool());
-        educationPayload.setDegree(educationRequest.getDegree());
-        educationPayload.setFieldOfStudy(educationRequest.getFieldOfStudy());
-        educationPayload.setStartMonth(educationRequest.getStartMonth());
-        educationPayload.setStartYear(educationRequest.getStartYear());
-        educationPayload.setEndMonth(educationRequest.getEndMonth());
-        educationPayload.setEndYear(educationRequest.getEndYear());
-        educationRepository.save(educationPayload);
+    public List<Language> createLanguage(LanguageRequest languageRequest) {
+        Language languagePayload = new Language();
+        languagePayload.setUserId(languageRequest.getUserId());
+        languagePayload.setLanguage(languageRequest.getLanguage());
+        languagePayload.setProficiency(languageRequest.getProficiency());
+        languageRepository.save(languagePayload);
       return null;
+    }
+
+    @Override
+    public Language updateLanguageByLanguageId(LanguageRequest languageRequest) {
+        Language updatedLanguage = new Language();
+        updatedLanguage.setLanguage(updatedLanguage.getLanguage());
+        updatedLanguage.setUserId(updatedLanguage.getUserId());
+        updatedLanguage.setProficiency(updatedLanguage.getProficiency());
+        languageRepository.save(updatedLanguage);
+        return updatedLanguage;
     }
 }

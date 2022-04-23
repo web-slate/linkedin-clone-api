@@ -1,10 +1,10 @@
 package com.linkedin.ProfessionalNetworking.repository;
 
-import com.linkedin.ProfessionalNetworking.model.Education;
+import com.linkedin.ProfessionalNetworking.model.Language;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface EducationRepository extends JpaRepository<Education, Long> {
-    public List<Education> findByUserId(String userId);
+public interface LanguageRepository extends JpaRepository<Language, Long> {
+    public List<Language> findByUserId(String userId);
 }
