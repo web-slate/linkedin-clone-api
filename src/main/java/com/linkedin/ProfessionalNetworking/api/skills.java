@@ -46,11 +46,11 @@ public class skills {
     }
 
     @PostMapping(value = "/skills")
-    public ResponseEntity<ApiResponse> createSkills(@RequestBody SkillsRequest skillsRequest) throws JsonProcessingException {
+    public ResponseEntity<ApiResponse> newSkill(@RequestBody SkillsRequest skillsRequest) throws JsonProcessingException {
         ApiResponse apiResponse = new ApiResponse();
 
         if (skillsRequest != null && StringUtils.isNotBlank(skillsRequest.getUserId())) {
-            List<Skills> newSkill = skillsService.createSkills(skillsRequest);
+            List<Skills> newSkill = skillsService.newSkill(skillsRequest);
             apiResponse.setResponse(newSkill);
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("new skills created");

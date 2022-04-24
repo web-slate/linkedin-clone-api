@@ -21,7 +21,7 @@ public class SkillsServiceImpl implements SkillsService {
     }
 
     @Override
-    public List<Skills> createSkills(SkillsRequest skillsRequest) {
+    public List<Skills> newSkill(SkillsRequest skillsRequest) {
         Skills skillsPayload = new Skills();
         skillsPayload.setUserId(skillsRequest.getUserId());
         skillsPayload.setSkill(skillsRequest.getSkill());
