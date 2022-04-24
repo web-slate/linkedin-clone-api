@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class skills {
+public class SkillController {
 
     @Autowired
-    SkillsService skillsService;
+    public SkillsService skillsService;
 
     @GetMapping(value = "/skills/{userId}")
     public ResponseEntity<ApiResponse> getSkillsByUserId(@PathVariable String userId) {
@@ -50,7 +50,7 @@ public class skills {
         ApiResponse apiResponse = new ApiResponse();
 
         if (skillsRequest != null && StringUtils.isNotBlank(skillsRequest.getUserId())) {
-            List<Skills> newSkill = skillsService.newSkill(skillsRequest);
+            Skills newSkill = skillsService.newSkill(skillsRequest);
             apiResponse.setResponse(newSkill);
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("new skills created");

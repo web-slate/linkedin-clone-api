@@ -13,7 +13,7 @@ import java.util.List;
 public class SkillsServiceImpl implements SkillsService {
 
     @Autowired
-    SkillsRepository skillsRepository;
+    public SkillsRepository skillsRepository;
 
     @Override
     public List<Skills> getSkillsByUserId(String userId) {
@@ -21,11 +21,11 @@ public class SkillsServiceImpl implements SkillsService {
     }
 
     @Override
-    public List<Skills> newSkill(SkillsRequest skillsRequest) {
+    public Skills newSkill(SkillsRequest skillsRequest) {
         Skills skillsPayload = new Skills();
         skillsPayload.setUserId(skillsRequest.getUserId());
         skillsPayload.setSkill(skillsRequest.getSkill());
         skillsRepository.save(skillsPayload);
-      return null;
+        return skillsPayload;
     }
 }
