@@ -1,10 +1,11 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.entity.Experience;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.*;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.*;
+
+import com.linkedin.network.entity.*;
 
 public interface ExperienceRepository extends JpaRepository<Experience, Long> {
-    public List<Experience> findByUserId(String userId);
+	public List<Experience> findByUserId(String userId);
 }

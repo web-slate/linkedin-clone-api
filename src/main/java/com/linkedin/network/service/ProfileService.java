@@ -1,13 +1,14 @@
 package com.linkedin.network.service;
 
-import com.linkedin.network.dto.ProfileRequest;
-import com.linkedin.network.entity.Profile;
+import java.util.*;
 
-import java.util.List;
+import com.linkedin.network.dto.*;
 
 public interface ProfileService {
 
-    Profile getProfileByUserId(String userId);
-    Profile updateProfileByProfileId(ProfileRequest profileRequest);
-    List<Profile> createProfileForUser(ProfileRequest profileRequest);
+	ProfileDTO getProfileByUserId(String userId);
+
+	ProfileDTO updateProfileByProfileId(ProfileRequest profileRequest);
+
+	List<ProfileDTO> createProfileForUser(ProfileRequest profileRequest);
 }

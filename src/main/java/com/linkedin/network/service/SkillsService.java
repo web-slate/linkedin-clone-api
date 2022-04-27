@@ -1,11 +1,12 @@
 package com.linkedin.network.service;
 
-import com.linkedin.network.dto.SkillsRequest;
-import com.linkedin.network.entity.Skills;
+import java.util.*;
 
-import java.util.List;
+import com.linkedin.network.dto.*;
+import com.linkedin.network.entity.*;
 
 public interface SkillsService {
-    List<Skills> getSkillsByUserId(String userId);
-    Skills newSkill(SkillsRequest skillsRequest);
+	List<Skills> getSkillsByUserId(String userId);
+
+	Skills newSkill(SkillsRequest skillsRequest);
 }

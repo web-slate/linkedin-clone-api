@@ -1,10 +1,12 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.entity.Profile;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.*;
+
+import com.linkedin.network.entity.*;
 
 public interface ProfileRepository extends JpaRepository<Profile, Long> {
 
-    public Profile findByUserId(String userId);
-    public Profile findByProfileId(String profileId);
+	public Profile findByUserId(String userId);
+
+	public Profile findByProfileId(String profileId);
 }

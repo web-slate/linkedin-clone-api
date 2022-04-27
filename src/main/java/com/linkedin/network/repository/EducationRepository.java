@@ -1,10 +1,11 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.entity.Education;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.*;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.*;
+
+import com.linkedin.network.entity.*;
 
 public interface EducationRepository extends JpaRepository<Education, Long> {
-    public List<Education> findByUserId(String userId);
+	public List<Education> findByUserId(String userId);
 }

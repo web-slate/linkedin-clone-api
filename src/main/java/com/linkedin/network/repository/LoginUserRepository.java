@@ -1,14 +1,13 @@
 package com.linkedin.network.repository;
 
+import java.util.*;
 
-import com.linkedin.network.entity.LoginUser;
+import org.springframework.data.jpa.repository.*;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.linkedin.network.entity.*;
 
-import java.util.List;
+public interface LoginUserRepository extends JpaRepository<LoginUser, String> {
 
-public interface LoginUserRepository extends JpaRepository<LoginUser,String>{
-
-    List<LoginUser> findByUserIdAndPassword(String userId, String password);
+	List<LoginUser> findByUserIdAndPassword(String userId, String password);
 
 }

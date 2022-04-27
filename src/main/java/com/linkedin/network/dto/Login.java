@@ -1,11 +1,11 @@
 package com.linkedin.network.dto;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
 public class Login {
-    public String userId;
+	public String userId;
 
-    public String password;
+	public String password;
 
 }

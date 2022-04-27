@@ -1,27 +1,27 @@
 package com.linkedin.network.dto;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
 public class FeedRequest {
 
-    public String legalName;
+	public String legalName;
 
-    public String occupation;
+	public String occupation;
 
-    public String companyName;
+	public String companyName;
 
-    public String text;
+	public String text;
 
-    public String totalLikes;
+	public String totalLikes;
 
-    public String totalComments;
+	public String totalComments;
 
-    public String comment ;
+	public String comment;
 
-    public String feedId;
+	public String feedId;
 
-    public String connectionType;
+	public String connectionType;
 
-    public String userId;
+	public String userId;
 }

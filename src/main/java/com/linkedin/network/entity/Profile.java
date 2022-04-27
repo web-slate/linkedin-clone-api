@@ -1,30 +1,33 @@
 package com.linkedin.network.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.util.*;
 
 import javax.persistence.*;
 
+import lombok.*;
+
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
-@Table(name="t_user_profile")
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "t_user_profile")
 public class Profile {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long profileId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long profileId;
 
-    @Column(name="first_name")
-    private String firstName;
+	@Column(name = "first_name")
+	private String firstName;
 
-    @Column(name="last_name")
-    private String lastName;
+	@Column(name = "last_name")
+	private String lastName;
 
-    @Column(name="additional_name")
-    private String additionalName;
+	@Column(name = "additional_name")
+	private String additionalName;
 
-    @Column(name="user_id")
-    private String userId;
+	@Column(name = "user_id")
+	private String userId;
+
+	private Date birthday;
+
 }

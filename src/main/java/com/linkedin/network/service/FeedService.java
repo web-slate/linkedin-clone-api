@@ -1,14 +1,13 @@
 package com.linkedin.network.service;
 
-import com.linkedin.network.dto.FeedRequest;
-import com.linkedin.network.entity.Feed;
+import java.util.*;
 
-import java.util.List;
+import com.linkedin.network.dto.*;
+import com.linkedin.network.entity.*;
 
 public interface FeedService {
 
-    public List<Feed> fetchFeedByUserId(String userId);
+	public List<Feed> fetchFeedByUserId(String userId);
 
-    List<Feed> createFeedForUser(FeedRequest feedRequest);
+	List<Feed> createFeedForUser(FeedRequest feedRequest);
 }
-

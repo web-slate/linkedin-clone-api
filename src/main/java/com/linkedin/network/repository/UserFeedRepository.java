@@ -1,13 +1,12 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.entity.Feed;
+import java.util.*;
 
+import org.springframework.data.jpa.repository.*;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.linkedin.network.entity.*;
 
-import java.util.List;
+public interface UserFeedRepository extends JpaRepository<Feed, Long> {
 
-public interface UserFeedRepository extends JpaRepository<Feed,Long>{
-
-    public List<Feed> findByUserId(String userId);
+	public List<Feed> findByUserId(String userId);
 }
