@@ -2,7 +2,7 @@ package com.linkedin.network.api;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.linkedin.network.dto.ProfileRequest;
-import com.linkedin.network.model.Profile;
+import com.linkedin.network.entity.Profile;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.ProfileService;
 import com.linkedin.network.util.Constants;

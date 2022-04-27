@@ -1,6 +1,6 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.model.Experience;
+import com.linkedin.network.entity.Experience;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

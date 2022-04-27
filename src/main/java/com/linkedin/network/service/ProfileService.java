@@ -1,7 +1,7 @@
 package com.linkedin.network.service;
 
 import com.linkedin.network.dto.ProfileRequest;
-import com.linkedin.network.model.Profile;
+import com.linkedin.network.entity.Profile;
 
 import java.util.List;
 

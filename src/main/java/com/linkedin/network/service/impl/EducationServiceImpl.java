@@ -1,7 +1,7 @@
 package com.linkedin.network.service.impl;
 
 import com.linkedin.network.dto.EducationRequest;
-import com.linkedin.network.model.Education;
+import com.linkedin.network.entity.Education;
 import com.linkedin.network.repository.EducationRepository;
 import com.linkedin.network.service.EducationService;
 import org.springframework.beans.factory.annotation.Autowired;

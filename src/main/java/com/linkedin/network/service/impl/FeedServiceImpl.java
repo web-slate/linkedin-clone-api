@@ -1,7 +1,7 @@
 package com.linkedin.network.service.impl;
 
 import com.linkedin.network.dto.FeedRequest;
-import com.linkedin.network.model.Feed;
+import com.linkedin.network.entity.Feed;
 import com.linkedin.network.repository.UserFeedRepository;
 import com.linkedin.network.service.FeedService;
 import org.springframework.beans.factory.annotation.Autowired;

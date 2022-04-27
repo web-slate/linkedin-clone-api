@@ -1,6 +1,6 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.model.Profile;
+import com.linkedin.network.entity.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProfileRepository extends JpaRepository<Profile, Long> {

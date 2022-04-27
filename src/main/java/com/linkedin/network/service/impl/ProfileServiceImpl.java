@@ -1,7 +1,7 @@
 package com.linkedin.network.service.impl;
 
 import com.linkedin.network.dto.ProfileRequest;
-import com.linkedin.network.model.Profile;
+import com.linkedin.network.entity.Profile;
 import com.linkedin.network.repository.ProfileRepository;
 import com.linkedin.network.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;

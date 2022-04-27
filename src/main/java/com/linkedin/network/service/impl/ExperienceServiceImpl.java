@@ -1,7 +1,7 @@
 package com.linkedin.network.service.impl;
 
 import com.linkedin.network.dto.ExperienceRequest;
-import com.linkedin.network.model.Experience;
+import com.linkedin.network.entity.Experience;
 import com.linkedin.network.repository.ExperienceRepository;
 import com.linkedin.network.service.ExperienceService;
 import org.springframework.beans.factory.annotation.Autowired;

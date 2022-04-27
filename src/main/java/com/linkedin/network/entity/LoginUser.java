@@ -1,4 +1,4 @@
-package com.linkedin.network.model;
+package com.linkedin.network.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

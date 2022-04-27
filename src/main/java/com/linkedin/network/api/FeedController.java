@@ -3,7 +3,7 @@ package com.linkedin.network.api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.linkedin.network.dto.FeedRequest;
-import com.linkedin.network.model.Feed;
+import com.linkedin.network.entity.Feed;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.FeedService;
 import com.linkedin.network.util.Constants;

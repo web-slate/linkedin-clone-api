@@ -1,7 +1,7 @@
 package com.linkedin.network.service;
 
 import com.linkedin.network.dto.EducationRequest;
-import com.linkedin.network.model.Education;
+import com.linkedin.network.entity.Education;
 
 import java.util.List;
 

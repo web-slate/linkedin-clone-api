@@ -2,7 +2,7 @@ package com.linkedin.network.api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.linkedin.network.dto.SkillsRequest;
-import com.linkedin.network.model.Skills;
+import com.linkedin.network.entity.Skills;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.SkillsService;
 import com.linkedin.network.util.Constants;

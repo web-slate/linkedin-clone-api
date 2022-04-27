@@ -1,6 +1,6 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.model.Education;
+import com.linkedin.network.entity.Education;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

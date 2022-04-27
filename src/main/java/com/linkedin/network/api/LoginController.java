@@ -4,7 +4,7 @@ package com.linkedin.network.api;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import com.linkedin.network.dto.Login;
-import com.linkedin.network.model.LoginUser;
+import com.linkedin.network.entity.LoginUser;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.LoginService;
 import com.linkedin.network.util.Constants;

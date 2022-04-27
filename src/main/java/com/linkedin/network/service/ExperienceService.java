@@ -1,7 +1,7 @@
 package com.linkedin.network.service;
 
 import com.linkedin.network.dto.ExperienceRequest;
-import com.linkedin.network.model.Experience;
+import com.linkedin.network.entity.Experience;
 
 import java.util.List;
 

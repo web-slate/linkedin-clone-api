@@ -1,6 +1,6 @@
 package com.linkedin.network.service;
 
-import com.linkedin.network.model.LoginUser;
+import com.linkedin.network.entity.LoginUser;
 
 import java.util.List;
 

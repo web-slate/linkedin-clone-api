@@ -1,6 +1,6 @@
 package com.linkedin.network.repository;
 
-import com.linkedin.network.model.Feed;
+import com.linkedin.network.entity.Feed;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
