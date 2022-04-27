@@ -2,8 +2,11 @@ package com.linkedin.ProfessionalNetworking.dto;
 
 import lombok.Data;
 
+import javax.validation.constraints.*;
+
 @Data
 public class ExperienceRequest {
+    @NotNull
     public String userId;
     public String title;
     public String employmentType;

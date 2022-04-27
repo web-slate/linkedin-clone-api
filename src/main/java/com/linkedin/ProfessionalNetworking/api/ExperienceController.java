@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class experience {
+public class ExperienceController {
 
     @Autowired
     ExperienceService experienceService;

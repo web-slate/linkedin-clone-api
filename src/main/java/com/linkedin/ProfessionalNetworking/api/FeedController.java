@@ -15,13 +15,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class linkedinFeed {
+public class FeedController {
 
-    private static final Logger log = LoggerFactory.getLogger(login.class);
+    private static final Logger log = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
     FeedService feedService;

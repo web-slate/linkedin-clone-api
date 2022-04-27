@@ -17,20 +17,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import com.linkedin.ProfessionalNetworking.response.ApiResponse;
-import com.linkedin.ProfessionalNetworking.util.Constants;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class login {
+public class LoginController {
 
-    private static final Logger log = LoggerFactory.getLogger(login.class);
+    private static final Logger log = LoggerFactory.getLogger(LoginController.class);
 
 
     @Autowired
