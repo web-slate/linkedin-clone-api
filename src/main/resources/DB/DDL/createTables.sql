@@ -58,3 +58,9 @@ CREATE TABLE public.t_skills(
     skill varchar NOT NULL,
     skill_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
 );
+
+CREATE TABLE public.t_causes (
+    user_id varchar NOT NULL,
+    cause varchar NOT NULL,
+    cause_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
+);

@@ -1,4 +1,4 @@
-package com.linkedin.ProfessionalNetworking.model;
+package com.linkedin.network.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,11 +9,12 @@ import javax.persistence.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="t_experience")
+@Table(name="t_causes")
 @Data
 public class Causes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="cause_id")
     private Long causeId;
 
     @Column(name="user_id")

@@ -1,4 +1,4 @@
-package com.linkedin.ProfessionalNetworking.dto;
+package com.linkedin.network.dto;
 
 import lombok.Data;
 

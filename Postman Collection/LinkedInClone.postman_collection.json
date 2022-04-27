@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "9fac2a97-0165-434d-a3d9-ef9a746410f9",
+		"_postman_id": "db9cb6e3-df1b-4305-84c9-9fd5d762fb34",
 		"name": "LinkedInClone",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -22,7 +22,18 @@
 							"mode": "raw",
 							"raw": "{\n  \"userId\": \"admin\",\n  \"firstName\": \"Sri Raghavi\",\n  \"lastName\": \"Venkatraman\",\n  \"additionalName\": \"Chuchu\"\n}"
 						},
-						"url": "http://localhost:8081/api/profile"
+						"url": {
+							"raw": "http://localhost:8081/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
 					},
 					"response": []
 				},
@@ -36,7 +47,19 @@
 								"value": "application/json"
 							}
 						],
-						"url": "http://localhost:8081/api/profile/admin"
+						"url": {
+							"raw": "http://localhost:8081/api/profile/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"admin"
+							]
+						}
 					},
 					"response": []
 				},
@@ -54,7 +77,18 @@
 							"mode": "raw",
 							"raw": "{\n  \"profileId\": \"2\",\n  \"userId\": \"admin\",\n  \"firstName\": \"Sri Raghavi\",\n  \"lastName\": \"Venkatraman\",\n  \"additionalName\": \"Sri\"\n}"
 						},
-						"url": "http://localhost:8081/api/profile"
+						"url": {
+							"raw": "http://localhost:8081/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
 					},
 					"response": []
 				}
@@ -77,7 +111,18 @@
 							"mode": "raw",
 							"raw": "{\n  \"userId\": \"admin\",\n  \"title\": \"CEO\",\n  \"employmentType\": \"Full Time\",\n  \"companyName\": \"Apple Inc\",\n  \"location\": \"Cupertino, California, United States\",\n  \"currentCompany\": true,\n  \"startDate\": \"01-04-1976\",\n  \"endDate\": \"\",\n  \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services.\"\n}"
 						},
-						"url": "http://localhost:8081/api/experience"
+						"url": {
+							"raw": "http://localhost:8081/api/experience",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"experience"
+							]
+						}
 					},
 					"response": []
 				},
@@ -91,7 +136,19 @@
 								"value": "application/json"
 							}
 						],
-						"url": "http://localhost:8081/api/experience/admin"
+						"url": {
+							"raw": "http://localhost:8081/api/experience/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"experience",
+								"admin"
+							]
+						}
 					},
 					"response": []
 				},
@@ -109,7 +166,18 @@
 							"mode": "raw",
 							"raw": "{\n  \"experienceId\": \"2\",\n  \"userId\": \"admin\",\n  \"title\": \"Apple CEO\",\n  \"employmentType\": \"Full Time\",\n  \"companyName\": \"Apple Inc\",\n  \"location\": \"Cupertino, California, United States\",\n  \"currentCompany\": true,\n  \"startDate\": \"01-04-1976\",\n  \"endDate\": \"\",\n  \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services.\"\n}"
 						},
-						"url": "http://localhost:8081/api/experience"
+						"url": {
+							"raw": "http://localhost:8081/api/experience",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"experience"
+							]
+						}
 					},
 					"response": []
 				}
@@ -132,7 +200,18 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/api/education"
+						"url": {
+							"raw": "http://localhost:8081/api/education",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"education"
+							]
+						}
 					},
 					"response": []
 				},
@@ -153,7 +232,19 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/api/education/1"
+						"url": {
+							"raw": "http://localhost:8081/api/education/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"education",
+								"1"
+							]
+						}
 					},
 					"response": []
 				}
@@ -176,7 +267,18 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/api/skills"
+						"url": {
+							"raw": "http://localhost:8081/api/skills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"skills"
+							]
+						}
 					},
 					"response": []
 				},
@@ -197,7 +299,105 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/api/skills/1"
+						"url": {
+							"raw": "http://localhost:8081/api/skills/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"skills",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Causes",
+			"item": [
+				{
+					"name": "Causes List by UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/profile/causes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"causes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Cause",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"2\",\n    \"cause\":\"Education\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/causes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"causes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cause by CauseId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"userId\": \"2\",\n            \"cause\": \"Health\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/causes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"causes",
+								"2"
+							]
+						}
 					},
 					"response": []
 				}
@@ -217,7 +417,18 @@
 					"mode": "raw",
 					"raw": "{\n  \"userId\": \"admin\",\n  \"password\": \"admin\"\n}"
 				},
-				"url": "http://localhost:8081/api/login"
+				"url": {
+					"raw": "http://localhost:8081/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"login"
+					]
+				}
 			},
 			"response": []
 		}

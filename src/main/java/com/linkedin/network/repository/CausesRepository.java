@@ -1,6 +1,6 @@
-package com.linkedin.ProfessionalNetworking.repository;
+package com.linkedin.network.repository;
 
-import com.linkedin.ProfessionalNetworking.model.Causes;
+import com.linkedin.network.model.Causes;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

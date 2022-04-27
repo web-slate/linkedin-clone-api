@@ -1,12 +1,12 @@
-package com.linkedin.ProfessionalNetworking.api;
+package com.linkedin.network.api;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.linkedin.ProfessionalNetworking.dto.CausesRequest;
-import com.linkedin.ProfessionalNetworking.model.Causes;
-import com.linkedin.ProfessionalNetworking.response.ApiResponse;
-import com.linkedin.ProfessionalNetworking.service.CausesService;
-import com.linkedin.ProfessionalNetworking.util.Constants;
+import com.linkedin.network.dto.CausesRequest;
+import com.linkedin.network.model.Causes;
+import com.linkedin.network.response.ApiResponse;
+import com.linkedin.network.service.CausesService;
+import com.linkedin.network.util.Constants;
 import io.micrometer.core.instrument.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -58,12 +58,12 @@ public class causes {
         return ResponseEntity.ok().body(apiResponse);
     }
 
-    @PutMapping(value = "/profile/causes")
-    public ResponseEntity<ApiResponse> updateCauseById(@RequestBody CausesRequest causesRequest) throws JsonParseException {
+    @PutMapping(value = "/profile/causes/{causeId}")
+    public ResponseEntity<ApiResponse> updateCauseById(@PathVariable Long causeId, @RequestBody CausesRequest causesRequest) throws JsonParseException {
         ApiResponse apiResponse = new ApiResponse();
 
         if (causesRequest != null) {
-            Causes updatedCause = causesService.updateCauseByCauseId(causesRequest);
+            Causes updatedCause = causesService.updateCauseByCauseId(causeId, causesRequest);
             apiResponse.setResponse(updatedCause);
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("updated cause");

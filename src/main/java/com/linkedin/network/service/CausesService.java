@@ -1,7 +1,7 @@
-package com.linkedin.ProfessionalNetworking.service;
+package com.linkedin.network.service;
 
-import com.linkedin.ProfessionalNetworking.dto.CausesRequest;
-import com.linkedin.ProfessionalNetworking.model.Causes;
+import com.linkedin.network.dto.CausesRequest;
+import com.linkedin.network.model.Causes;
 
 import java.util.List;
 
@@ -9,6 +9,6 @@ public interface CausesService {
 
     List<Causes> getCausesByUserId(String userId);
 
-    Causes updateCauseByCauseId(CausesRequest causesRequest);
+    Causes updateCauseByCauseId(Long causeId, CausesRequest causesRequest);
     List<Causes> createCause(CausesRequest causesRequest);
 }

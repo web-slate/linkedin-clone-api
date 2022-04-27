@@ -1,9 +1,9 @@
-package com.linkedin.ProfessionalNetworking.service.impl;
+package com.linkedin.network.service.impl;
 
-import com.linkedin.ProfessionalNetworking.dto.CausesRequest;
-import com.linkedin.ProfessionalNetworking.model.Causes;
-import com.linkedin.ProfessionalNetworking.repository.CausesRepository;
-import com.linkedin.ProfessionalNetworking.service.CausesService;
+import com.linkedin.network.dto.CausesRequest;
+import com.linkedin.network.model.Causes;
+import com.linkedin.network.repository.CausesRepository;
+import com.linkedin.network.service.CausesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +21,9 @@ public class CausesServiceImpl implements CausesService {
     }
 
     @Override
-    public Causes updateCauseByCauseId(CausesRequest causesRequest) {
+    public Causes updateCauseByCauseId(Long causeId, CausesRequest causesRequest) {
         Causes updatedCauses = new Causes();
-        updatedCauses.setCauseId(causesRequest.getCauseId());
+        updatedCauses.setCauseId(causeId);
         updatedCauses.setUserId(causesRequest.getUserId());
         updatedCauses.setCause(causesRequest.getCause());
         causesRepository.save(updatedCauses);
