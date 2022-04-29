@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class causes {
+public class CausesController {
 
     @Autowired
-    CausesService causesService;
+    private CausesService causesService;
 
     @GetMapping(value = "profile/causes/{userId}")
     public ResponseEntity<ApiResponse> getCausesByUserId(@PathVariable String userId) {
@@ -47,7 +47,7 @@ public class causes {
         ApiResponse apiResponse = new ApiResponse();
 
         if (causesRequest != null && StringUtils.isNotBlank(causesRequest.getUserId())) {
-            List<Causes> newCause = causesService.createCause(causesRequest);
+            Causes newCause = causesService.createCause(causesRequest);
             apiResponse.setResponse(newCause);
             apiResponse.setStatus(HttpStatus.OK.toString());
             apiResponse.setMessage("new cause created");

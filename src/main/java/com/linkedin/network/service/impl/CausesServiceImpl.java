@@ -13,7 +13,7 @@ import java.util.List;
 public class CausesServiceImpl implements CausesService {
 
     @Autowired
-    CausesRepository causesRepository;
+    private CausesRepository causesRepository;
 
     @Override
     public List<Causes> getCausesByUserId(String userId) {
@@ -31,11 +31,11 @@ public class CausesServiceImpl implements CausesService {
     }
 
     @Override
-    public List<Causes> createCause(CausesRequest causesRequest) {
+    public Causes createCause(CausesRequest causesRequest) {
         Causes causesPayload = new Causes();
         causesPayload.setUserId(causesRequest.getUserId());
         causesPayload.setCause(causesRequest.getCause());
         causesRepository.save(causesPayload);
-        return null;
+        return causesPayload;
     }
 }

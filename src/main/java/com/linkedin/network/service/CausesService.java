@@ -10,5 +10,5 @@ public interface CausesService {
     List<Causes> getCausesByUserId(String userId);
 
     Causes updateCauseByCauseId(Long causeId, CausesRequest causesRequest);
-    List<Causes> createCause(CausesRequest causesRequest);
+    Causes createCause(CausesRequest causesRequest);
 }
