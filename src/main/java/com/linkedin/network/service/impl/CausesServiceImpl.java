@@ -1,13 +1,14 @@
 package com.linkedin.network.service.impl;
 
 import com.linkedin.network.dto.CausesRequest;
-import com.linkedin.network.model.Causes;
+import com.linkedin.network.entity.Causes;
 import com.linkedin.network.repository.CausesRepository;
 import com.linkedin.network.service.CausesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CausesServiceImpl implements CausesService {
@@ -22,12 +23,14 @@ public class CausesServiceImpl implements CausesService {
 
     @Override
     public Causes updateCauseByCauseId(Long causeId, CausesRequest causesRequest) {
-        Causes updatedCauses = new Causes();
-        updatedCauses.setCauseId(causeId);
-        updatedCauses.setUserId(causesRequest.getUserId());
-        updatedCauses.setCause(causesRequest.getCause());
-        causesRepository.save(updatedCauses);
-        return updatedCauses;
+        Optional<Causes> existingCause = Optional.of(causesRepository.getById(causeId));
+        if(existingCause.isPresent()) {
+            Causes updatedCauses = existingCause.get();
+            updatedCauses.setUserId(causesRequest.getUserId());
+            updatedCauses.setCause(causesRequest.getCause());
+            causesRepository.save(updatedCauses);
+        }
+        return null;
     }
 
     @Override
