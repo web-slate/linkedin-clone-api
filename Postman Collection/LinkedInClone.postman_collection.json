@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "db9cb6e3-df1b-4305-84c9-9fd5d762fb34",
+		"_postman_id": "60793c8a-340c-4f49-8595-053f3c1c11bf",
 		"name": "LinkedInClone",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -395,6 +395,92 @@
 								"api",
 								"profile",
 								"causes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Languages",
+			"item": [
+				{
+					"name": "Languages by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/profile/languages/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"languages",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Language",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"2\",\n    \"language\":\"tamil\",\n    \"proficiency\":\"native\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/languages/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"languages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Language ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"userId\": \"2\",\n            \"language\": \"TAMIL\",\n            \"proficiency\":\"native\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/languages/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"languages",
 								"2"
 							]
 						}

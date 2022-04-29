@@ -64,3 +64,10 @@ CREATE TABLE public.t_causes (
     cause varchar NOT NULL,
     cause_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
 );
+
+CREATE TABLE public.t_languages (
+    user_id varchar NOT NULL,
+    language varchar NOT NULL,
+    proficiency varchar NOT NULL,
+    language_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY
+);
