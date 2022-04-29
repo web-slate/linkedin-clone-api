@@ -12,6 +12,5 @@ public interface ProfileMapper {
 	ProfileMapper INSTANCE = Mappers.getMapper(ProfileMapper.class);
 
 	@Mapping(source = "profileId", target = "id")
-	// @Mapping(source = "birthday", target = "birthday", dateFormat = "yyyy-MM-dd")
 	ProfileDTO toDto(Profile profile);
 }
