@@ -1,7 +1,7 @@
 package com.linkedin.network.service;
 
 import com.linkedin.network.dto.CausesRequest;
-import com.linkedin.network.model.Causes;
+import com.linkedin.network.entity.Causes;
 
 import java.util.List;
 

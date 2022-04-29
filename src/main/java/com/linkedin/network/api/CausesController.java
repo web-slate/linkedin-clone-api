@@ -3,7 +3,7 @@ package com.linkedin.network.api;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.linkedin.network.dto.CausesRequest;
-import com.linkedin.network.model.Causes;
+import com.linkedin.network.entity.Causes;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.CausesService;
 import com.linkedin.network.util.Constants;
