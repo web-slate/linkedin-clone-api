@@ -1,7 +1,7 @@
 package com.linkedin.network.api;
 
 import com.fasterxml.jackson.core.JsonParseException;
-import com.linkedin.network.dto.ProfileRequest;
+import com.linkedin.network.dto.*;
 import com.linkedin.network.entity.Profile;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.ProfileService;
@@ -29,7 +29,7 @@ public class ProfileController {
     public ResponseEntity<ApiResponse> getProfileByUserId(@PathVariable String userId) throws JsonParseException {
         ApiResponse apiResponse = new ApiResponse();
         if (userId != null) {
-          Profile foundProfile = profileService.getProfileByUserId(userId);
+          ProfileDTO foundProfile = profileService.getProfileByUserId(userId);
           if (foundProfile != null) {
               apiResponse.setResponse(foundProfile);
               apiResponse.setStatus(HttpStatus.OK.toString());
