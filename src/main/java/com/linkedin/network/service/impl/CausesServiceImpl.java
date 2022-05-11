@@ -1,12 +1,12 @@
 package com.linkedin.network.service.impl;
 
-import com.linkedin.network.dto.CausesRequest;
+import com.linkedin.network.dto.*;
+import com.linkedin.network.mapper.*;
 import com.linkedin.network.entity.Causes;
 import com.linkedin.network.repository.CausesRepository;
 import com.linkedin.network.service.CausesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -17,8 +17,9 @@ public class CausesServiceImpl implements CausesService {
     private CausesRepository causesRepository;
 
     @Override
-    public List<Causes> getCausesByUserId(String userId) {
-        return causesRepository.findByUserId(userId);
+    public List<CausesDTO> getCausesByUserId(String userId) {
+        Causes causes = causesRepository.findByUserId(userId);
+        return CausesMapper.INSTANCE.toDto(causes);
     }
 
     @Override
