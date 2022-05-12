@@ -1,5 +1,5 @@
 
-# Linkedin Clone Application
+# Linkedin Clone API
 Linkedin Clone Application
 
 ## Requirements
