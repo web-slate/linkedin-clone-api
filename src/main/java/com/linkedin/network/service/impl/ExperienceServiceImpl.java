@@ -1,7 +1,8 @@
 package com.linkedin.network.service.impl;
 
-import com.linkedin.network.dto.ExperienceRequest;
+import com.linkedin.network.dto.ExperienceDTO;
 import com.linkedin.network.entity.Experience;
+import com.linkedin.network.mapper.ExperienceMapper;
 import com.linkedin.network.repository.ExperienceRepository;
 import com.linkedin.network.service.ExperienceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +17,13 @@ public class ExperienceServiceImpl implements ExperienceService {
     ExperienceRepository experienceRepository;
 
     @Override
-    public List<Experience> getExperienceByUserId(String userId) {
-        return experienceRepository.findByUserId(userId);
+    public List<ExperienceDTO> getExperienceByUserId(String userId) {
+        List<Experience> experiences = experienceRepository.findByUserId(userId);
+        return ExperienceMapper.INSTANCE.toDto(experiences);
     }
 
     @Override
-    public Experience updateExperienceByExperienceId(ExperienceRequest experienceRequest) {
+    public Experience updateExperienceByExperienceId(ExperienceDTO experienceRequest) {
         Experience updatedExperience = new Experience();
         updatedExperience.setExperienceId(experienceRequest.getExperienceId());
         updatedExperience.setUserId(experienceRequest.getUserId());
@@ -38,7 +40,7 @@ public class ExperienceServiceImpl implements ExperienceService {
     }
 
     @Override
-    public List<Experience> createExperience(ExperienceRequest experienceRequest) {
+    public List<Experience> createExperience(ExperienceDTO experienceRequest) {
         Experience experiencePayload = new Experience();
         experiencePayload.setUserId(experienceRequest.getUserId());
         experiencePayload.setTitle(experienceRequest.getTitle());
