@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.validation.constraints.*;
 
 @Data
-public class ExperienceRequest {
+public class ExperienceDTO {
     @NotNull
     public String userId;
     public String title;
