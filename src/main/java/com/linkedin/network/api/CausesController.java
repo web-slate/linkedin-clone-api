@@ -26,7 +26,7 @@ public class CausesController {
     public ResponseEntity<ApiResponse> getCausesByUserId(@PathVariable String userId) {
         ApiResponse apiResponse = new ApiResponse();
         if (userId != null) {
-            List<CausesDTO> foundCauses = (List<CausesDTO>) causesService.getCausesByUserId(userId);
+            List<CausesDTO> foundCauses = causesService.getCausesByUserId(userId);
             if (foundCauses != null && !foundCauses.isEmpty()) {
                 apiResponse.setResponse(foundCauses);
                 apiResponse.setStatus(HttpStatus.OK.toString());

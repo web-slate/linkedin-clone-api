@@ -6,5 +6,5 @@ import lombok.Data;
 public class CausesDTO {
     private String userId;
     private String cause;
-    private Long causeId;
+    private Long causeIdentifier;
 }

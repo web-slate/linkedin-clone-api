@@ -6,11 +6,13 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface CausesMapper {
 
 	CausesMapper INSTANCE = Mappers.getMapper(CausesMapper.class);
 
-	@Mapping(source = "causeId", target = "causeId")
-	CausesDTO toDto(Causes causes);
+	@Mapping(source = "causeId", target = "causeIdentifier")
+	List<CausesDTO> toDtoList(List<Causes> causes);
 }

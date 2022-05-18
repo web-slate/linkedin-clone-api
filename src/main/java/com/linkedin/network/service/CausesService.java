@@ -7,7 +7,6 @@ import java.util.List;
 public interface CausesService {
 
     List<CausesDTO> getCausesByUserId(String userId);
-
     Causes updateCauseByCauseId(Long causeId, CausesRequest causesRequest);
     Causes createCause(CausesRequest causesRequest);
 }
