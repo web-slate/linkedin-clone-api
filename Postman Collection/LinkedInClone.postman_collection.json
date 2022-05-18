@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "60793c8a-340c-4f49-8595-053f3c1c11bf",
+		"name": "LinkedInClone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Add New Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"admin\",\n  \"firstName\": \"Sri Raghavi\",\n  \"lastName\": \"Venkatraman\",\n  \"additionalName\": \"Chuchu\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Profile by User Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/profile/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile by Profile Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profileId\": \"2\",\n  \"userId\": \"admin\",\n  \"firstName\": \"Sri Raghavi\",\n  \"lastName\": \"Venkatraman\",\n  \"additionalName\": \"Sri\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Experience",
+			"item": [
+				{
+					"name": "Add New Experience",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"admin\",\n  \"title\": \"CEO\",\n  \"employmentType\": \"Full Time\",\n  \"companyName\": \"Apple Inc\",\n  \"location\": \"Cupertino, California, United States\",\n  \"currentCompany\": true,\n  \"startDate\": \"01-04-1976\",\n  \"endDate\": \"\",\n  \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/experience",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"experience"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Experience by User Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/experience/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"experience",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Experience by Experience Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"experienceId\": \"2\",\n  \"userId\": \"admin\",\n  \"title\": \"Apple CEO\",\n  \"employmentType\": \"Full Time\",\n  \"companyName\": \"Apple Inc\",\n  \"location\": \"Cupertino, California, United States\",\n  \"currentCompany\": true,\n  \"startDate\": \"01-04-1976\",\n  \"endDate\": \"\",\n  \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/experience",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"experience"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Education",
+			"item": [
+				{
+					"name": "Add new Education",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"1\",\n    \"school\": \"test\",\n    \"fieldOfStudy\": \"english\",\n    \"startMonth\": \"jan\",\n    \"startYear\": \"2021\",\n    \"endMonth\": \"jan\",\n    \"endYear\": \"2022\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/education",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find education by User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"1\",\n    \"school\": \"test\",\n    \"fieldOfStudy\": \"english\",\n    \"startMonth\": \"jan\",\n    \"startYear\": \"2021\",\n    \"endMonth\": \"jan\",\n    \"endYear\": \"2022\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/education/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"education",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Skills",
+			"item": [
+				{
+					"name": "Add new Skills",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"userId\":\"1\",\n   \"skill\":\"ReactJs,NodeJs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/skills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find skill by User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/skills/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"skills",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Causes",
+			"item": [
+				{
+					"name": "Causes List by UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/profile/causes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"causes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Cause",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"2\",\n    \"cause\":\"Education\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/causes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"causes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cause by CauseId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"userId\": \"2\",\n            \"cause\": \"Health\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/causes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"causes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Languages",
+			"item": [
+				{
+					"name": "Languages by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/profile/languages/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"languages",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Language",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"2\",\n    \"language\":\"tamil\",\n    \"proficiency\":\"native\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/languages/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"languages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Language ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"userId\": \"2\",\n            \"language\": \"TAMIL\",\n            \"proficiency\":\"native\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/profile/languages/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"profile",
+								"languages",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"admin\",\n  \"password\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
