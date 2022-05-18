@@ -13,6 +13,8 @@ public interface CausesMapper {
 
 	CausesMapper INSTANCE = Mappers.getMapper(CausesMapper.class);
 
-	@Mapping(source = "causeId", target = "causeIdentifier")
 	List<CausesDTO> toDtoList(List<Causes> causes);
+
+	@Mapping(source = "causeId", target = "causeIdentifier")
+	CausesDTO toDto(Causes cause);
 }

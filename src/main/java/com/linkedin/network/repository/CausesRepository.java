@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface CausesRepository extends JpaRepository<Causes, Long> {
-    Causes findByUserId(String userId);
+    List<Causes> findByUserId(String userId);
 }
