@@ -1,14 +1,14 @@
 package com.linkedin.network.service;
 
-import com.linkedin.network.dto.ExperienceRequest;
+import com.linkedin.network.dto.ExperienceDTO;
 import com.linkedin.network.entity.Experience;
 
 import java.util.List;
 
 public interface ExperienceService {
 
-    List<Experience> getExperienceByUserId(String userId);
+    List<ExperienceDTO> getExperienceByUserId(String userId);
 
-    Experience updateExperienceByExperienceId(ExperienceRequest experienceRequest);
-    List<Experience> createExperience(ExperienceRequest experienceRequest);
+    Experience updateExperienceByExperienceId(ExperienceDTO experienceRequest);
+    List<Experience> createExperience(ExperienceDTO experienceRequest);
 }

@@ -2,7 +2,7 @@ package com.linkedin.network.api;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.linkedin.network.dto.ExperienceRequest;
+import com.linkedin.network.dto.ExperienceDTO;
 import com.linkedin.network.entity.Experience;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.ExperienceService;
@@ -25,7 +25,7 @@ public class ExperienceController {
     public ResponseEntity<ApiResponse> getExperienceByUserId(@PathVariable String userId) {
         ApiResponse apiResponse = new ApiResponse();
         if (userId != null) {
-            List<Experience> foundExperience = experienceService.getExperienceByUserId(userId);
+            List<ExperienceDTO> foundExperience = experienceService.getExperienceByUserId(userId);
             if (foundExperience != null && !foundExperience.isEmpty()) {
                 apiResponse.setResponse(foundExperience);
                 apiResponse.setStatus(HttpStatus.OK.toString());
@@ -43,7 +43,7 @@ public class ExperienceController {
     }
 
     @PostMapping(value = "/experience")
-    public ResponseEntity<ApiResponse> createExperience(@RequestBody ExperienceRequest experienceRequest) throws JsonProcessingException {
+    public ResponseEntity<ApiResponse> createExperience(@RequestBody ExperienceDTO experienceRequest) throws JsonProcessingException {
         ApiResponse apiResponse = new ApiResponse();
 
         if (experienceRequest != null && StringUtils.isNotBlank(experienceRequest.getUserId())) {
@@ -59,7 +59,7 @@ public class ExperienceController {
     }
 
     @PutMapping(value = "/experience")
-    public ResponseEntity<ApiResponse> updateExperienceById(@RequestBody ExperienceRequest experienceRequest) throws JsonParseException {
+    public ResponseEntity<ApiResponse> updateExperienceById(@RequestBody ExperienceDTO experienceRequest) throws JsonParseException {
         ApiResponse apiResponse = new ApiResponse();
 
         if (experienceRequest != null) {
