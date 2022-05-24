@@ -23,11 +23,9 @@ public class ConnectionController {
 	public ResponseEntity<ApiResponse> getAllUsers() {
 		ApiResponse apiResponse = new ApiResponse();
 		List<ProfileDTO> connections = connectionService.getConnections();
+		apiResponse.setResponse(connections);
+		apiResponse.setMessage("Found Connections");
 		if (!CollectionUtils.isEmpty(connections)) {
-			apiResponse.setResponse(connections);
-			apiResponse.setStatus(HttpStatus.OK.toString());
-			apiResponse.setMessage("Found Connections");
-		} else {
 			apiResponse.setMessage("No active connections available");
 		}
 		return ResponseEntity.ok().body(apiResponse);
