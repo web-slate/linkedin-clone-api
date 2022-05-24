@@ -3,6 +3,7 @@ package com.linkedin.network.api;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.linkedin.network.dto.SkillsRequest;
 import com.linkedin.network.entity.Skills;
+import com.linkedin.network.dto.SkillsDTO;
 import com.linkedin.network.response.ApiResponse;
 import com.linkedin.network.service.SkillsService;
 import com.linkedin.network.util.Constants;
@@ -28,7 +29,7 @@ public class SkillController {
     public ResponseEntity<ApiResponse> getSkillsByUserId(@PathVariable String userId) {
         ApiResponse apiResponse = new ApiResponse();
         if (userId != null) {
-            List<Skills> foundSkills = skillsService.getSkillsByUserId(userId);
+            List<SkillsDTO> foundSkills = skillsService.getSkillsByUserId(userId);
             if (foundSkills != null) {
                 apiResponse.setResponse(foundSkills);
                 apiResponse.setStatus(HttpStatus.OK.toString());
