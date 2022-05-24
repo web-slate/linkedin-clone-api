@@ -6,8 +6,6 @@ import com.linkedin.network.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class LoginServiceImpl implements LoginService {
 
@@ -15,7 +13,7 @@ public class LoginServiceImpl implements LoginService {
     LoginUserRepository loginUserRepository;
 
     @Override
-    public List<LoginUser> checkUserLogin(String userId, String password) {
+    public LoginUser checkUserLogin(String userId, String password) {
         return loginUserRepository.findByUserIdAndPassword(userId, password);
 
     }

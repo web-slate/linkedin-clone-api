@@ -41,8 +41,8 @@ public class LoginController {
         ApiResponse apiResponse = new ApiResponse();
 
         if (login.getUserId() != null && login.getPassword() != null) {
-            List<LoginUser> lstLoginUsr = loginService.checkUserLogin(login.getUserId(), login.getPassword());
-            if (!lstLoginUsr.isEmpty()) {
+            LoginUser loginUsr = loginService.checkUserLogin(login.getUserId(), login.getPassword());
+            if (loginUsr!= null) {
                 apiResponse.setStatus(HttpStatus.OK.toString());
                 apiResponse.setMessage("Success");
             } else {
