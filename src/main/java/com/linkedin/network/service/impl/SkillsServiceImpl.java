@@ -1,7 +1,9 @@
 package com.linkedin.network.service.impl;
 
+import com.linkedin.network.dto.SkillsDTO;
 import com.linkedin.network.dto.SkillsRequest;
 import com.linkedin.network.entity.Skills;
+import com.linkedin.network.mapper.SkillMapper;
 import com.linkedin.network.repository.SkillsRepository;
 import com.linkedin.network.service.SkillsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,9 @@ public class SkillsServiceImpl implements SkillsService {
     public SkillsRepository skillsRepository;
 
     @Override
-    public List<Skills> getSkillsByUserId(String userId) {
-        return skillsRepository.findByUserId(userId);
+    public List<SkillsDTO> getSkillsByUserId(String userId) {
+        List<Skills> skill = skillsRepository.findByUserId(userId);
+        return SkillMapper.INSTANCE.toDto(skill);
     }
 
     @Override
