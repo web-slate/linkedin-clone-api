@@ -27,4 +27,7 @@ public class Profile {
 
     @Column(name="user_id")
     private String userId;
+
+    @Column
+    private boolean active;
 }
