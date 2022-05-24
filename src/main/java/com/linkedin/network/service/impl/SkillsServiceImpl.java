@@ -19,7 +19,7 @@ public class SkillsServiceImpl implements SkillsService {
 
     @Override
     public List<SkillsDTO> getSkillsByUserId(String userId) {
-        List<Skills> skill = (List<Skills>) skillsRepository.findByUserId(userId);
+        List<Skills> skill = skillsRepository.findByUserId(userId);
         return SkillMapper.INSTANCE.toDto(skill);
     }
 
