@@ -18,7 +18,7 @@ public class CausesServiceImpl implements CausesService {
 
     @Override
     public List<CausesDTO> getCausesByUserId(String userId) {
-        List<Causes> causes = (List<Causes>) causesRepository.findByUserId(userId);
+        List<Causes> causes = causesRepository.findByUserId(userId);
         return CausesMapper.INSTANCE.toDtoList(causes);
     }
 
