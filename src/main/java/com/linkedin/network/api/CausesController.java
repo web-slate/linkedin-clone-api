@@ -2,6 +2,7 @@ package com.linkedin.network.api;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.linkedin.network.dto.CausesDTO;
 import com.linkedin.network.dto.CausesRequest;
 import com.linkedin.network.entity.Causes;
 import com.linkedin.network.response.ApiResponse;
@@ -25,7 +26,7 @@ public class CausesController {
     public ResponseEntity<ApiResponse> getCausesByUserId(@PathVariable String userId) {
         ApiResponse apiResponse = new ApiResponse();
         if (userId != null) {
-            List<Causes> foundCauses = causesService.getCausesByUserId(userId);
+            List<CausesDTO> foundCauses = causesService.getCausesByUserId(userId);
             if (foundCauses != null && !foundCauses.isEmpty()) {
                 apiResponse.setResponse(foundCauses);
                 apiResponse.setStatus(HttpStatus.OK.toString());
